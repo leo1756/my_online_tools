@@ -320,7 +320,7 @@ if st.session_state.validation_df is not None and not st.session_state.validatio
         return ""
 
 
-    styled_df = filtered_df.style.applymap(color_status, subset=["验证结果"])
+    styled_df = filtered_df.style.map(color_status, subset=["验证结果"])
     st.dataframe(styled_df, use_container_width=True, height=400)
 
     # 导出功能
